@@ -1,19 +1,15 @@
 #********************************************************************************PATH********************************************************************************
 # Output
-output_dir: '../store/dreaddit/corpus_bert_no_cross_all'
+output_dir: '../store/train_1'
 
 # Data
-train_path: '../data/dreaddit/Processed/dreaddit_train_gpt4o_improved.csv'
-val_path: '../data/dreaddit/Processed/dreaddit_val_gpt4o_improved.csv'
-test_path: '../data/dreaddit/Processed/dreaddit_test_gpt4o_improved.csv'
+train_path: '../data/train.csv'
+val_path: '../data/val.csv'
+test_path: '../data/test.csv'
 
 # Checkpoint
 use_train_checkpoint: False
-train_checkpoint: '../paper_experiment/loneliness/best_classifier_decoder_only_all/checkpoint_21.pth'
-eval_checkpoint: '../paper_experiment/loneliness/best_classifier_decoder_only_all/checkpoint_21.pth'
-
-# Bert Config
-bert_config: '../configs/model/bert_base.json'
+train_checkpoint: '../store/train_1/checkpoint_01.pth'
 
 #********************************************************************************TRAIN********************************************************************************
 # Distributed training
