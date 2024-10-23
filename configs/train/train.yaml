@@ -1,6 +1,6 @@
 #********************************************************************************PATH********************************************************************************
 # Output
-output_dir: '../paper_experiment/dreaddit/corpus_bert_no_cross_all'
+output_dir: '../store/dreaddit/corpus_bert_no_cross_all'
 
 # Data
 train_path: '../data/dreaddit/Processed/dreaddit_train_gpt4o_improved.csv'

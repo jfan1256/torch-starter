@@ -24,7 +24,7 @@ For example, in `./class_model/model.py`, you should replace `# TODO: ADD CODE H
 3. `./exec_train/utils_train.py`: Add your training procedure here.
 4. `./configs/train/train.yaml`: Add your configurations here.
 
-### Features
+## Features
 1. **Metric Logger**: A prebuilt system that beautifully displays training and validation losses during each epoch, providing real-time insights into model performance.
 2. **Model Checkpointing and Loss Logging**: Automatic saving of model checkpoints and loss statistics after each epoch, ensuring that your progress is tracked seamlessly.
 3. **Configurable Settings**: The code is designed to read all configurations from a YAML file, allowing for easy adjustments without modifying the code.
