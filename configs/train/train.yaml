@@ -1,0 +1,40 @@
+#********************************************************************************PATH********************************************************************************
+# Output
+output_dir: '../paper_experiment/dreaddit/corpus_bert_no_cross_all'
+
+# Data
+train_path: '../data/dreaddit/Processed/dreaddit_train_gpt4o_improved.csv'
+val_path: '../data/dreaddit/Processed/dreaddit_val_gpt4o_improved.csv'
+test_path: '../data/dreaddit/Processed/dreaddit_test_gpt4o_improved.csv'
+
+# Checkpoint
+use_train_checkpoint: False
+train_checkpoint: '../paper_experiment/loneliness/best_classifier_decoder_only_all/checkpoint_21.pth'
+eval_checkpoint: '../paper_experiment/loneliness/best_classifier_decoder_only_all/checkpoint_21.pth'
+
+# Bert Config
+bert_config: '../configs/model/bert_base.json'
+
+#********************************************************************************TRAIN********************************************************************************
+# Distributed training
+distributed: False
+dist_url: 'tcp://'
+package: 'gloo'
+num_gpu: 1
+
+# Device
+train_device: 'cuda:0'
+eval_device: 'cuda:1'
+
+# Param
+batch_size: 8
+max_epoch: 100
+early_stop: 5
+
+# Optimizer
+eta: 0.00001
+
+#********************************************************************************MODEL********************************************************************************
+# Loss
+loss:
+  - loss_ce
