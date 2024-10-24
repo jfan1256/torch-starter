@@ -6,12 +6,14 @@ from matplotlib.patches import Patch
 from matplotlib.colors import ListedColormap
 from matplotlib.collections import LineCollection
 
+# Brighten colors
 def brighten_colors(cmap, factor=0.2):
     c = cmap(np.arange(cmap.N))
     c[:, :-1] += (1.0 - c[:, :-1]) * factor
     c = np.clip(c, 0, 1)
     return ListedColormap(c)
 
+# Get colormap
 def get_fold_colormap(fold, brighten=True):
     base_colormaps = [cm.plasma, cm.viridis, cm.inferno, cm.magma, cm.cividis]
     if brighten:

@@ -26,8 +26,8 @@ def model_pass(model, batch, configs):
     losses = model(index=index, device=configs['train_device'])
 
     # Total loss
-    total_loss = sum(loss for loss in losses.values())
-    return total_loss, losses
+    loss_total = sum(loss for key, loss in losses.items() if key in configs['loss'])
+    return loss_total, losses
 
 # Training Loop
 def train(epoch, model, dataloader, optimizer, configs):
